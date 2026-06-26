@@ -9,23 +9,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="panel-container mt-5">
-      <h2 class="text-center mb-4">Bienvenido a Alke Wallet</h2>
-      
-      <div class="card card-balance text-center p-4 mb-4">
-        <h5>Saldo Disponible</h5>
-        <h2 id="mainBalance">$0.00</h2>
+    <div class="app-container mt-5">
+      <h3 class="text-center font-weight-bold mb-4">Mi Billetera</h3>
+      <div class="balance-card text-center mb-5">
+        <h5 class="mb-2">Saldo Disponible</h5>
+        <h2 id="mainBalance" class="mb-0">$0.00</h2>
       </div>
-
       <div class="d-flex flex-column">
-        <a href="deposit.html" class="btn btn-primary btn-block mb-2">Depositar Fondos</a>
-        <a href="sendmoney.html" class="btn btn-success btn-block mb-2">Enviar Dinero</a>
-        <a href="transactions.html" class="btn btn-info btn-block mb-2">Últimos Movimientos</a>
-        <a href="index.html" class="btn btn-outline-danger btn-block mt-4">Cerrar Sesión</a>
+        <a href="deposit.html" class="btn btn-bancario btn-deposito mb-3">Depositar Fondos</a>
+        <a href="sendmoney.html" class="btn btn-bancario btn-envio mb-3">Enviar Dinero</a>
+        <a href="transactions.html" class="btn btn-bancario btn-historial mb-4">Últimos Movimientos</a>
+        <hr class="w-100 mb-3">
+        <a href="index.html" class="btn btn-outline-danger btn-bancario font-weight-bold">Cerrar Sesión</a>
       </div>
     </div>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
 </body>

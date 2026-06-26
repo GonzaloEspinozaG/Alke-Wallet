@@ -9,19 +9,18 @@
 </head>
 <body>
   <div class="container">
-    <div class="panel-container mt-5">
-      <h2 class="text-primary text-center mb-4">Depositar Fondos</h2>
-      <form id="depositForm">
+    <div class="app-container mt-5">
+      <h3 class="text-center font-weight-bold mb-4 text-success">Depositar Fondos</h3>
+      <form id="depositForm" class="mb-4">
         <div class="form-group">
-          <label for="depositAmount">Monto a depositar ($):</label>
-          <input type="number" class="form-control" id="depositAmount" placeholder="Ej: 5000" min="1" required>
+          <label for="depositAmount" class="font-weight-bold">Monto a depositar ($)</label>
+          <input type="number" class="form-control form-control-lg" id="depositAmount" placeholder="Ej: 5000" min="1" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block mb-3">Confirmar Depósito</button>
+        <button type="submit" class="btn btn-bancario btn-deposito btn-block mt-4">Confirmar Depósito</button>
       </form>
-      <a href="menu.html" class="btn btn-secondary btn-block">Volver al Menú Principal</a>
+      <a href="menu.html" class="btn btn-outline-secondary btn-bancario btn-block font-weight-bold">Volver al Menú</a>
     </div>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
 </body>

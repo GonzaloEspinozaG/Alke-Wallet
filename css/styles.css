@@ -1,23 +1,72 @@
-body { 
-    background-color: #f8f9fa; 
-    padding-top: 40px; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    background-color: #eef2f5;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
 }
 
-/* Estilos compartidos para los contenedores (Login, Envíos, Depósitos) */
-.panel-container, .login-container { 
-    max-width: 440px; 
-    margin: 0 auto; 
-    background: white; 
-    padding: 30px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+/* Contenedor principal */
+.app-container {
+    max-width: 420px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    padding: 35px 25px;
 }
 
-/* Tarjeta principal del menú */
-.card-balance { 
-    background: linear-gradient(135deg, #007bff, #0056b3); 
-    color: white; 
+/* Tarjeta de saldo */
+.balance-card {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 16px;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(30, 60, 114, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efectos */
+.balance-card:hover {
+    transform: translateY(-5px);
+}
+
+.balance-card h5 {
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.balance-card h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Estética botones */
+.btn-bancario {
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     border: none;
-    border-radius: 10px;
+    transition: all 0.3s ease;
 }
+
+.btn-bancario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Colores botones */
+.btn-deposito { background-color: #27ae60; color: white; }
+.btn-deposito:hover { background-color: #219a52; color: white; }
+
+.btn-envio { background-color: #2980b9; color: white; }
+.btn-envio:hover { background-color: #2471a3; color: white; }
+
+.btn-historial { background-color: #8e44ad; color: white; }
+.btn-historial:hover { background-color: #7d3cb5; color: white; }
