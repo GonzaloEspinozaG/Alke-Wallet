@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Alke Wallet - Depositar</title>
+</head>
+<body>
+  <div class="container">
+    <div class="panel-container mt-5">
+      <h2 class="text-primary text-center mb-4">Depositar Fondos</h2>
+      <form id="depositForm">
+        <div class="form-group">
+          <label for="depositAmount">Monto a depositar ($):</label>
+          <input type="number" class="form-control" id="depositAmount" placeholder="Ej: 5000" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mb-3">Confirmar Depósito</button>
+      </form>
+      <a href="menu.html" class="btn btn-secondary btn-block">Volver al Menú Principal</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
