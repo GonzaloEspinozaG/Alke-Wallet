@@ -103,12 +103,22 @@ $(document).ready(function() {
 
   $('#sendMoneyForm').submit(function(event) {
     event.preventDefault();
-    var contact = $('#searchContact').val().trim();
+    var contactInput = $('#searchContact').val().trim();
     var amount = parseFloat($('#sendAmount').val());
     var currentBalance = parseFloat(localStorage.getItem('walletBalance'));
+    var contacts = JSON.parse(localStorage.getItem('contacts'));
 
-    if (!contact) {
+    if (!contactInput) {
       alert('Por favor, selecciona o escribe un destinatario.');
+      return;
+    }
+
+    var contactMatch = contacts.find(function(c) {
+      return c.name.toLowerCase() === contactInput.toLowerCase();
+    });
+
+    if (!contactMatch) {
+      alert('Usuario no encontrado. Por favor, selecciona un contacto de tu agenda o agrégalo primero.');
       return;
     }
 
@@ -118,10 +128,10 @@ $(document).ready(function() {
         localStorage.setItem('walletBalance', currentBalance.toFixed(2));
 
         var transactions = JSON.parse(localStorage.getItem('transactions'));
-        transactions.unshift({ type: 'out', desc: 'Envío de dinero a ' + contact, amount: amount });
+        transactions.unshift({ type: 'out', desc: 'Envío de dinero a ' + contactMatch.name, amount: amount });
         localStorage.setItem('transactions', JSON.stringify(transactions));
 
-        alert('¡Transferencia enviada con éxito!');
+        alert('¡Transferencia enviada con éxito a ' + contactMatch.name + '!');
         window.location.href = 'menu.html';
       } else {
         alert('Saldo insuficiente para completar esta operación.');
