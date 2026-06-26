@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base en blanco</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Alke Wallet - Menú Principal</title>
 </head>
 <body>
+  <div class="container">
+    <div class="panel-container mt-5">
+      <h2 class="text-center mb-4">Bienvenido a Alke Wallet</h2>
+      
+      <div class="card card-balance text-center p-4 mb-4">
+        <h5>Saldo Disponible</h5>
+        <h2 id="mainBalance">$0.00</h2>
+      </div>
 
+      <div class="d-flex flex-column">
+        <a href="deposit.html" class="btn btn-primary btn-block mb-2">Depositar Fondos</a>
+        <a href="sendmoney.html" class="btn btn-success btn-block mb-2">Enviar Dinero</a>
+        <a href="transactions.html" class="btn btn-info btn-block mb-2">Últimos Movimientos</a>
+        <a href="index.html" class="btn btn-outline-danger btn-block mt-4">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
