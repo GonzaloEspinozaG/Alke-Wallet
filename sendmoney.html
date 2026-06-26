@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Alke Wallet - Enviar Dinero</title>
+</head>
+<body>
+  <div class="container">
+    <div class="panel-container mt-4">
+      <h2 class="text-success text-center mb-4">Enviar Dinero</h2>
+      
+      <form id="sendMoneyForm" class="mb-4">
+        <div class="form-group">
+          <label for="searchContact">Buscar o seleccionar contacto:</label>
+          <input type="text" class="form-control" id="searchContact" placeholder="Escribe para buscar..." required>
+        </div>
+        <div class="form-group">
+          <label for="sendAmount">Monto a enviar ($):</label>
+          <input type="number" class="form-control" id="sendAmount" placeholder="Monto" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Ejecutar Transferencia</button>
+      </form>
+
+      <h4 class="mt-4">Agenda de Contactos</h4>
+      <ul id="contactList" class="list-group mb-4" style="max-height: 200px; overflow-y: auto;">
+      </ul>
+
+      <form id="addContactForm" class="mb-4 border-top pt-3">
+        <h5>Nuevo Contacto</h5>
+        <div class="input-group">
+          <input type="text" id="newContactName" class="form-control" placeholder="Nombre completo" required>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Añadir</button>
+          </div>
+        </div>
+      </form>
+
+      <a href="menu.html" class="btn btn-secondary btn-block">Volver al Menú Principal</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
