@@ -1,5 +1,13 @@
 $(document).ready(function() {
-  
+
+  var currentPage = window.location.pathname.split('/').pop();
+  if (currentPage !== 'index.html' && currentPage !== '') {
+    if (localStorage.getItem('isAuthenticated') !== 'true') {
+      window.location.replace('index.html');
+      return;
+    }
+  }
+
   if (!localStorage.getItem('walletBalance')) {
     localStorage.setItem('walletBalance', '0.00');
   }
@@ -19,10 +27,17 @@ $(document).ready(function() {
     var password = $('#password').val();
 
     if (username === 'admin' && password === '12345') {
+      localStorage.setItem('isAuthenticated', 'true');
       window.location.href = 'menu.html';
     } else {
       alert('Usuario o contraseña inválido. Inténtalo de nuevo.');
     }
+  });
+
+  $('a[href="index.html"]').click(function(event) {
+    event.preventDefault();
+    localStorage.removeItem('isAuthenticated');
+    window.location.href = 'index.html';
   });
 
   if ($('#mainBalance').length) {
